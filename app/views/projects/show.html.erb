@@ -1,0 +1,21 @@
+<article>
+	<header>
+		<h1><%= @projects.name %></h1>
+	</header>
+	<h2>Description</h2>
+	<p>
+		<%= @projects.description %>
+	</p>
+	<h3>Funds Needed: </h3>
+	<p>
+		<%= format_target_pledge_amount(@projects) %>
+	</p>
+	<h3>Website</h3>
+	<p>
+		<%= @projects.website %>
+	</p>
+	<h3>Pledging Ends In:</h3>
+	<p>
+		<%= time_remaining(@projects) %>
+	</p>
+</article>
