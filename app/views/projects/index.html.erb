@@ -3,7 +3,7 @@
 
 <ul>
 	<% @projects.each do |project| %>
-		<strong><li><%= project.name %></strong>
+		<strong><li><%= link_to project.name, project %></strong>
 			<br>Description: <%= truncate(project.description, length: 40, separator: ' ') %>
 			<br>Funds Needed: <%= format_target_pledge_amount(project) %>
 			<br>Website: <%= project.website %>
